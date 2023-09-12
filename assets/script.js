@@ -1,3 +1,4 @@
+// Define the quiz questions and answers
 const questions = [
     {
         question: "What does HTML stand for?",
@@ -33,11 +34,13 @@ const questions = [
 
 ];
 
+// Global variables
 let currentQuestionIndex = 0;
 let timeLeft = 60;
 let timerInterval;
 let score = 0;
 
+// DOM elements
 const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const gameOverScreen = document.getElementById("game-over-screen");
@@ -54,10 +57,13 @@ const highscore = document.getElementById("highscore");
 const clearButton = document.getElementById("clear-score");
 const playAgainButton = document.getElementById("play-again");
 
+// Event listeners
 startButton.addEventListener("click", startQuiz);
 choicesElement.addEventListener("click", handleAnswer);
 submitScoreButton.addEventListener("click", saveScore);
+playAgainButton.addEventListener("click", startQuiz);
 
+// Start the quiz
 function startQuiz() {
     hideElement(startScreen);
     hideElement(highscoreScreen);
@@ -66,12 +72,14 @@ function startQuiz() {
     startTimer();
 }
 
+// Load a question
 function loadQuestion() {
     const { question, choices } = questions[currentQuestionIndex];
     questionElement.textContent = question;
     choicesElement.innerHTML = choices.map(choice => `<li>${choice}</li>`).join('');
 }
 
+// Handle user's answer
 function handleAnswer(event) {
     if (event.target.matches("li")) {
         const selectedAnswer = event.target.textContent;
@@ -106,7 +114,7 @@ function handleAnswer(event) {
         }
     }
 
-
+// Start the timer
 function startTimer() {
     timerInterval = setInterval(function() {
         timeLeft--;
@@ -118,6 +126,7 @@ function startTimer() {
     }, 1000);
 }
 
+// End the quiz
 function endQuiz() {
     clearInterval(timerInterval);
     hideElement(quizScreen);
@@ -127,8 +136,11 @@ function endQuiz() {
     showElement(submitScoreButton);
 }
 
+
+// Initialize the savedScores array
 let savedScores = []; 
 
+// Save the score to local storage
 function saveScore() {
     const initials = initialsInput.value.trim();
 
@@ -150,7 +162,10 @@ function saveScore() {
     showElement(highscoreScreen);
     highscore.textContent = savedScores.map(item => item.initials + ": " + item.score).join("\n");
 
+    // Add an event listener to the "Clear Score" button
     clearButton.addEventListener("click", clearHighScores);
+    
+        // Function to clear high scores
     function clearHighScores() {
         localStorage.removeItem("scores");
     
@@ -162,13 +177,12 @@ function saveScore() {
 
 }
 
-
-playAgainButton.addEventListener("click", startQuiz);
-
+// Function to hide an element
 function hideElement(element) {
     element.classList.add("hidden");
 }
 
+// Function to show an element
 function showElement(element) {
     element.classList.remove("hidden");
 }
