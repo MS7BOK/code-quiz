@@ -4,39 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <header>
         <h1>Code Quiz</h1>
     </header>
     <main>
+        <!-- Start Screen Section -->
         <div id="start-screen">
             <h2>Welcome to the Code Quiz!</h2>
-            <button id="start-button">Start Quiz</button>
+            <button id="start-button">Start Quiz</button> <!-- Start Quiz Button -->
         </div>
+
+        <!-- Quiz Screen Section -->
         <div id="quiz-screen" class="hidden">
             <div id="question-container">
-                <h2 id="question"></h2>
-                <ul id="choices"></ul> 
-                <p id="answer-feedback"></p>
+                <h2 id="question"></h2> <!-- Question Text -->
+                <ul id="choices"></ul> <!-- List of Choices -->
+                <p id="answer-feedback"></p> <!-- Feedback for Answers -->
             </div>
-            <div id="timer">Time: <span id="time-left">60</span> seconds</div>
+            <div id="timer">Time: <span id="time-left">60</span> seconds</div> <!-- Timer -->
         </div>
+
+        <!-- Game Over Screen Section -->
         <div id="game-over-screen" class="hidden">
             <h2>Game Over!</h2>
-            <p>Your score: <span id="final-score"></span></p>
-            <input type="text" id="initials" placeholder="Enter your initials">
-            <button id="submit-score">Submit</button>
+            <p>Your score: <span id="final-score"></span></p> <!-- Final Score -->
+            <input type="text" id="initials" placeholder="Enter your initials"> <!-- Initials Input Field -->
+            <button id="submit-score">Submit</button> <!-- Submit Score Button -->
         </div>
-        
+
+        <!-- Highscore Screen Section -->
         <div id="highscore-screen" class="hidden">
             <h2>Highscores</h2>
-            <p><span id="highscore"></span></p>
-            <button id="clear-score">Clear Score</button>
-            <button id="play-again">Play again</button>
+            <p><span id="highscore"></span></p> <!-- Displays Highscores -->
+            <button id="clear-score">Clear Score</button> <!-- Clear Score Button -->
+            <button id="play-again">Play again</button> <!-- Play Again Button -->
         </div>
     </main>
-    <script src="assets/script.js"></script>
+    <script src="assets/script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
