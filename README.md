@@ -9,10 +9,13 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 
 Screenshots:
-![Screenshot of Application](https://ms7bok.github.io/code-quiz/assests/images/start-screen.png)
-![Screenshot of Application](https://ms7bok.github.io/code-quiz/assests/images/quiz-screen.png)
-![Screenshot of Application](https://ms7bok.github.io/code-quiz/assests/images/game-over.png)
-![Screenshot of Application](https://ms7bok.github.io/code-quiz/assests/images/highscore-screen.png)
+![Screenshot of Application](https://ms7bok.github.io/code-quiz/assets/images/start-screen.png)
+![Screenshot of Application](https://ms7bok.github.io/code-quiz/assets/images/quiz-screen.png)
+![Screenshot of Application](https://ms7bok.github.io/code-quiz/assets/images/game-over.png)
+![Screenshot of Application](https://ms7bok.github.io/code-quiz/assets/images/highscore-screen.png)
 
 Link of deployed project:
 [https://ms7bok.github.io/code-quiz](https://ms7bok.github.io/code-quiz)
+
+Link of github project:
+[https://github.com/MS7BOK/code-quiz](https://github.com/MS7BOK/code-quiz)
